@@ -11,6 +11,9 @@
 		30C052CE2ABE913B00A37FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C052CD2ABE913B00A37FFF /* ContentView.swift */; };
 		30C052D02ABE913C00A37FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C052CF2ABE913C00A37FFF /* Assets.xcassets */; };
 		30C052D32ABE913C00A37FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C052D22ABE913C00A37FFF /* Preview Assets.xcassets */; };
+		30C052DB2ABE945C00A37FFF /* CassandraClient in Frameworks */ = {isa = PBXBuildFile; productRef = 30C052DA2ABE945C00A37FFF /* CassandraClient */; };
+		30C052DD2ABE947000A37FFF /* Cassandra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C052DC2ABE947000A37FFF /* Cassandra.swift */; };
+		30C052DF2ABE98F200A37FFF /* TextProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C052DE2ABE98F200A37FFF /* TextProcessing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		30C052CD2ABE913B00A37FFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		30C052CF2ABE913C00A37FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30C052D22ABE913C00A37FFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30C052DC2ABE947000A37FFF /* Cassandra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cassandra.swift; sourceTree = "<group>"; };
+		30C052DE2ABE98F200A37FFF /* TextProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextProcessing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C052DB2ABE945C00A37FFF /* CassandraClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +61,8 @@
 				30C052CD2ABE913B00A37FFF /* ContentView.swift */,
 				30C052CF2ABE913C00A37FFF /* Assets.xcassets */,
 				30C052D12ABE913C00A37FFF /* Preview Content */,
+				30C052DC2ABE947000A37FFF /* Cassandra.swift */,
+				30C052DE2ABE98F200A37FFF /* TextProcessing.swift */,
 			);
 			path = Assignment02_Arailym;
 			sourceTree = "<group>";
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = Assignment02_Arailym;
+			packageProductDependencies = (
+				30C052DA2ABE945C00A37FFF /* CassandraClient */,
+			);
 			productName = Assignment02_Arailym;
 			productReference = 30C052C82ABE913B00A37FFF /* Assignment02_Arailym.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 30C052BF2ABE913B00A37FFF;
+			packageReferences = (
+				30C052D92ABE945C00A37FFF /* XCRemoteSwiftPackageReference "swift-cassandra-client" */,
+			);
 			productRefGroup = 30C052C92ABE913B00A37FFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C052CE2ABE913B00A37FFF /* ContentView.swift in Sources */,
+				30C052DF2ABE98F200A37FFF /* TextProcessing.swift in Sources */,
+				30C052DD2ABE947000A37FFF /* Cassandra.swift in Sources */,
 				30C052CC2ABE913B00A37FFF /* Assignment02_ArailymApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30C052D92ABE945C00A37FFF /* XCRemoteSwiftPackageReference "swift-cassandra-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-cassandra-client";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30C052DA2ABE945C00A37FFF /* CassandraClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30C052D92ABE945C00A37FFF /* XCRemoteSwiftPackageReference "swift-cassandra-client" */;
+			productName = CassandraClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30C052C02ABE913B00A37FFF /* Project object */;
 }
